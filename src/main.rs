@@ -73,8 +73,8 @@ async fn quote_search_single_page(
             .unwrap()
             .0
             .to_owned();
-        let quote_struct = Quote::new(id, author.trim().to_owned(), quote.trim().to_owned());
-        //println!("{:#?}", quote_struct);
+        let quote_struct = Quote::new(id, author.trim().to_owned(), quote.trim().to_owned()); //trim() returns &str
+
         quote_organized.push(quote_struct);
         id = id + 1;
     }
